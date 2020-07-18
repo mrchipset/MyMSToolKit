@@ -1,6 +1,16 @@
+/*
+mzMLReader - The code is
+open source under the FreeBSD License, please see LICENSE file
+for detailed information.
+
+Copyright (C) 2011, Mike Hoopmann, Institute for Systems Biology
+Version 1.0, January 4, 2011.
+Version 1.1, March 14, 2012.
+*/
 #include "mzParser.h"
 
 using namespace std;
+using namespace mzParser;
 
 int main(int argc, char* argv[]){
 

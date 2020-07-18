@@ -129,19 +129,21 @@ The End
 */
 
 #include "mzParser.h"
+using namespace std;
+using namespace mzParser;
 
 // Static callback handlers
-void mzp_startElementCallback(void *data, const XML_Char *el, const XML_Char **attr)
+static void mzp_startElementCallback(void *data, const XML_Char *el, const XML_Char **attr)
 {
 	((mzpSAXHandler*) data)->startElement(el, attr);
 }
 
-void mzp_endElementCallback(void *data, const XML_Char *el)
+static void mzp_endElementCallback(void *data, const XML_Char *el)
 {
 	((mzpSAXHandler*) data)->endElement(el);
 }
 
-void mzp_charactersCallback(void *data, const XML_Char *s, int len)
+static void mzp_charactersCallback(void *data, const XML_Char *s, int len)
 {
 	((mzpSAXHandler*) data)->characters(s, len);
 }
@@ -183,7 +185,7 @@ bool mzpSAXHandler::open(const char* fileName){
 	if(m_bGZCompression) fptr=fopen(fileName,"rb");
 	else fptr=fopen(fileName,"r");
 	if(fptr==NULL){
-		cerr << "Failed to open input file '" << fileName << "'.\n";
+		//cerr << "Failed to open input file '" << fileName << "'.\n";
 		return false;
 	}
 	setFileName(fileName);
@@ -312,7 +314,7 @@ bool mzpSAXHandler::parseOffset(f_off offset){
 
 		cerr << m_strFileName
 			<< "(" << XML_GetCurrentLineNumber(m_parser) << ")"
-			<< " : error " << (int) error << ": ";
+			<< " : parseOffset() " << (int) error << ": ";
 
 		switch (error)
 		{

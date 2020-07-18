@@ -118,9 +118,10 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_LIB;_NOSQLITE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_LIB;_NOSQLITE;_NO_THERMORAW;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>../lib/expat/include;../lib/zlib/include;</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -134,9 +135,10 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_LIB;_NOSQLITE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_LIB;_NOSQLITE;_NO_THERMORAW;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>../lib/expat/include;../lib/zlib/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -147,17 +149,151 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\include\CAdditionalSearchParams.h" />
+    <ClInclude Include="..\include\CAffiliation.h" />
+    <ClInclude Include="..\include\CAnalysisCollection.h" />
+    <ClInclude Include="..\include\CAnalysisData.h" />
+    <ClInclude Include="..\include\CAnalysisParams.h" />
+    <ClInclude Include="..\include\CAnalysisProtocolCollection.h" />
+    <ClInclude Include="..\include\CAnalysisSampleCollection.h" />
+    <ClInclude Include="..\include\CAnalysisSoftware.h" />
+    <ClInclude Include="..\include\CAnalysisSoftwareList.h" />
+    <ClInclude Include="..\include\CAuditCollection.h" />
+    <ClInclude Include="..\include\CBibliographicReference.h" />
+    <ClInclude Include="..\include\CContactRole.h" />
+    <ClInclude Include="..\include\CCvList.h" />
+    <ClInclude Include="..\include\CDatabaseName.h" />
+    <ClInclude Include="..\include\CDataCollection.h" />
+    <ClInclude Include="..\include\CDBSequence.h" />
+    <ClInclude Include="..\include\CEnzyme.h" />
+    <ClInclude Include="..\include\CEnzymeName.h" />
+    <ClInclude Include="..\include\CEnzymes.h" />
+    <ClInclude Include="..\include\CFileFormat.h" />
+    <ClInclude Include="..\include\CFragmentArray.h" />
+    <ClInclude Include="..\include\CFragmentation.h" />
+    <ClInclude Include="..\include\CFragmentationTable.h" />
+    <ClInclude Include="..\include\CFragmentTolerance.h" />
+    <ClInclude Include="..\include\CInputs.h" />
+    <ClInclude Include="..\include\CIonType.h" />
+    <ClInclude Include="..\include\CMassTable.h" />
+    <ClInclude Include="..\include\CMeasure.h" />
+    <ClInclude Include="..\include\CModification.h" />
+    <ClInclude Include="..\include\CModificationParams.h" />
+    <ClInclude Include="..\include\CMzIdentML.h" />
+    <ClInclude Include="..\include\COrganization.h" />
+    <ClInclude Include="..\include\CParent.h" />
+    <ClInclude Include="..\include\CParentTolerance.h" />
+    <ClInclude Include="..\include\CPeptide.h" />
+    <ClInclude Include="..\include\CPeptideEvidence.h" />
+    <ClInclude Include="..\include\CPeptideHypothesis.h" />
+    <ClInclude Include="..\include\CPerson.h" />
+    <ClInclude Include="..\include\CProteinAmbiguityGroup.h" />
+    <ClInclude Include="..\include\CProteinDetection.h" />
+    <ClInclude Include="..\include\CProteinDetectionHypothesis.h" />
+    <ClInclude Include="..\include\CProteinDetectionList.h" />
+    <ClInclude Include="..\include\CProteinDetectionProtocol.h" />
+    <ClInclude Include="..\include\CProvider.h" />
+    <ClInclude Include="..\include\CPSM.h" />
+    <ClInclude Include="..\include\CResidue.h" />
+    <ClInclude Include="..\include\CRole.h" />
+    <ClInclude Include="..\include\CSearchDatabase.h" />
+    <ClInclude Include="..\include\CSearchModification.h" />
+    <ClInclude Include="..\include\CSearchType.h" />
+    <ClInclude Include="..\include\CSequenceCollection.h" />
+    <ClInclude Include="..\include\CSiteRegexp.h" />
+    <ClInclude Include="..\include\CSoftwareName.h" />
+    <ClInclude Include="..\include\CSourceFile.h" />
+    <ClInclude Include="..\include\CSpecificityRules.h" />
+    <ClInclude Include="..\include\CSpectraData.h" />
+    <ClInclude Include="..\include\CSpectrumIdentification.h" />
+    <ClInclude Include="..\include\CSpectrumIdentificationItem.h" />
+    <ClInclude Include="..\include\CSpectrumIdentificationList.h" />
+    <ClInclude Include="..\include\CSpectrumIdentificationProtocol.h" />
+    <ClInclude Include="..\include\CSpectrumIdentificationResult.h" />
+    <ClInclude Include="..\include\CSpectrumIDFormat.h" />
+    <ClInclude Include="..\include\CThreshold.h" />
     <ClInclude Include="..\include\MSNumpress.hpp" />
     <ClInclude Include="..\include\MSObject.h" />
     <ClInclude Include="..\include\MSReader.h" />
     <ClInclude Include="..\include\MSToolkitTypes.h" />
+    <ClInclude Include="..\include\mzIMLStructs.h" />
+    <ClInclude Include="..\include\mzIMLTools.h" />
+    <ClInclude Include="..\include\mzMLWriter.h" />
     <ClInclude Include="..\include\mzParser.h" />
+    <ClInclude Include="..\include\nametab.h" />
+    <ClInclude Include="..\include\pepXMLWriter.h" />
+    <ClInclude Include="..\include\RAWReader.h" />
     <ClInclude Include="..\include\Spectrum.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\MSToolkit\MSObject.cpp" />
     <ClCompile Include="..\src\MSToolkit\MSReader.cpp" />
+    <ClCompile Include="..\src\MSToolkit\mzMLWriter.cpp" />
+    <ClCompile Include="..\src\MSToolkit\pepXMLWriter.cpp" />
+    <ClCompile Include="..\src\MSToolkit\RAWReader.cpp" />
     <ClCompile Include="..\src\MSToolkit\Spectrum.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CAdditionalSearchParams.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CAffiliation.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CAnalysisCollection.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CAnalysisData.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CAnalysisParams.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CAnalysisProtocolCollection.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CAnalysisSoftware.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CAnalysisSoftwareList.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CAuditCollection.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CBibliographicReference.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CContactRole.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CCvList.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CDatabaseName.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CDataCollection.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CDBSequence.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CEnzyme.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CEnzymeName.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CEnzymes.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CFileFormat.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CFragmentArray.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CFragmentation.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CFragmentationTable.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CFragmentTolerance.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CInputs.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CIonType.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CMassTable.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CMeasure.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CModification.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CModificationParams.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CMzIdentML.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\COrganization.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CParent.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CParentTolerance.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CPeptide.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CPeptideEvidence.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CPeptideHypothesis.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CPerson.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CProteinAmbiguityGroup.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CProteinDetection.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CProteinDetectionHypothesis.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CProteinDetectionList.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CProteinDetectionProtocol.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CProvider.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CPSM.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CResidue.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CRole.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CSearchDatabase.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CSearchModification.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CSearchType.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CSequenceCollection.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CSiteRegexp.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CSoftwareName.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CSourceFile.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CSpecificityRules.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CSpectraData.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CSpectrumIdentification.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CSpectrumIdentificationItem.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CSpectrumIdentificationList.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CSpectrumIdentificationProtocol.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CSpectrumIdentificationResult.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CSpectrumIDFormat.cpp" />
+    <ClCompile Include="..\src\mzIMLTools\CThreshold.cpp" />
     <ClCompile Include="..\src\mzParser\BasicChromatogram.cpp" />
     <ClCompile Include="..\src\mzParser\BasicSpectrum.cpp" />
     <ClCompile Include="..\src\mzParser\Czran.cpp" />

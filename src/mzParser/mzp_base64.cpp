@@ -1,3 +1,8 @@
+/* Source code obtained from X!Tandem
+   Copyright, The Global Proteome Machine Organization
+   Under the Artistic License: http://opensource.org/licenses/artistic-license-1.0
+*/
+
 /* downloaded from web */
 //#include <cmath>
 //#include <stdio.h>
@@ -34,6 +39,24 @@ static void encode_group (unsigned char output[],
 
 	/* lower 6 bits of ingrp[2] */
 	output[3] = n > 2 ? b64_tbl[ingrp[2] & 0x3f] : b64_pad;
+
+}
+
+int mzParser::b64_encode (char *dest,
+                const char *src,
+                int len)
+{
+  int outsz = 0;
+
+  while (len > 0)
+  {
+    encode_group ( (unsigned char*) dest + outsz, (const unsigned char*) src, len > 3 ? 3 : len);
+    len -= 3;
+    src += 3;
+    outsz += 4;
+  }
+
+  return outsz;
 
 }
 
@@ -92,7 +115,7 @@ inline int getPosition( char buf )
 
 
 // Returns the total number of bytes decoded
-int b64_decode_mio ( char *dest,  char *src, size_t size )
+int mzParser::b64_decode_mio ( char *dest,  char *src, size_t size )
 {
 	char *temp = dest;
 	char *end = dest + size;

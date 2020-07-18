@@ -19,6 +19,9 @@
     <Filter Include="源文件\mzParser">
       <UniqueIdentifier>{820b29e7-587e-47d2-89fb-508331e9d6d8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\mzIMLTools">
+      <UniqueIdentifier>{828104b0-78cf-4c12-88ee-cd6363e141c8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\MSNumpress.hpp">
@@ -37,6 +40,213 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\include\Spectrum.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CAdditionalSearchParams.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CAffiliation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CAnalysisCollection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CAnalysisData.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CAnalysisParams.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CAnalysisProtocolCollection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CAnalysisSampleCollection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CAnalysisSoftware.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CAnalysisSoftwareList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CAuditCollection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CBibliographicReference.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CContactRole.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CCvList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CDatabaseName.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CDataCollection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CDBSequence.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CEnzyme.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CEnzymeName.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CEnzymes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CFileFormat.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CFragmentArray.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CFragmentation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CFragmentationTable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CFragmentTolerance.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CInputs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CIonType.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CMassTable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CMeasure.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CModification.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CModificationParams.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CMzIdentML.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\COrganization.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CParent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CParentTolerance.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CPeptide.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CPeptideEvidence.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CPeptideHypothesis.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CPerson.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CProteinAmbiguityGroup.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CProteinDetection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CProteinDetectionHypothesis.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CProteinDetectionList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CProteinDetectionProtocol.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CProvider.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CPSM.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CResidue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CRole.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CSearchDatabase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CSearchModification.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CSearchType.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CSequenceCollection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CSiteRegexp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CSoftwareName.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CSourceFile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CSpecificityRules.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CSpectraData.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CSpectrumIdentification.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CSpectrumIdentificationItem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CSpectrumIdentificationList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CSpectrumIdentificationProtocol.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CSpectrumIdentificationResult.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CSpectrumIDFormat.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CThreshold.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\mzIMLStructs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\mzIMLTools.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\mzMLWriter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\nametab.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\pepXMLWriter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\RAWReader.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -94,6 +304,201 @@
     </ClCompile>
     <ClCompile Include="..\src\mzParser\saxmzxmlhandler.cpp">
       <Filter>源文件\mzParser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CAdditionalSearchParams.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CAffiliation.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CAnalysisCollection.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CAnalysisData.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CAnalysisParams.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CAnalysisProtocolCollection.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CAnalysisSoftware.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CAnalysisSoftwareList.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CAuditCollection.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CBibliographicReference.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CContactRole.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CCvList.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CDatabaseName.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CDataCollection.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CDBSequence.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CEnzyme.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CEnzymeName.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CEnzymes.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CFileFormat.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CFragmentArray.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CFragmentation.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CFragmentationTable.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CFragmentTolerance.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CInputs.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CIonType.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CMassTable.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CMeasure.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CModification.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CModificationParams.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CMzIdentML.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\COrganization.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CParent.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CParentTolerance.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CPeptide.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CPeptideEvidence.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CPeptideHypothesis.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CPerson.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CProteinAmbiguityGroup.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CProteinDetection.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CProteinDetectionHypothesis.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CProteinDetectionList.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CProteinDetectionProtocol.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CProvider.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CPSM.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CResidue.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CRole.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CSearchDatabase.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CSearchModification.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CSearchType.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CSequenceCollection.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CSiteRegexp.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CSoftwareName.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CSourceFile.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CSpecificityRules.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CSpectraData.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CSpectrumIdentification.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CSpectrumIdentificationItem.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CSpectrumIdentificationList.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CSpectrumIdentificationProtocol.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CSpectrumIdentificationResult.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CSpectrumIDFormat.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mzIMLTools\CThreshold.cpp">
+      <Filter>源文件\mzIMLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MSToolkit\mzMLWriter.cpp">
+      <Filter>源文件\MSToolKit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MSToolkit\pepXMLWriter.cpp">
+      <Filter>源文件\MSToolKit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MSToolkit\RAWReader.cpp">
+      <Filter>源文件\MSToolKit</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

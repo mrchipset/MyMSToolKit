@@ -1,6 +1,10 @@
 #include "mzParser.h"
+#include "MSObject.h"
+#include "mzMLWriter.h"
 
 using namespace std;
+using namespace mzParser;
+using namespace MSToolkit;
 
 int main(int argc, char* argv[]) {
 
@@ -26,7 +30,8 @@ int main(int argc, char* argv[]) {
 		for (int k = 0; k < (int)pairs.size(); k++) cout << pairs[k].time << " " << pairs[k].intensity << endl;
 	}
 
-	exit(1);
+
+	//exit(1);
 
 	BasicSpectrum s;
 	BasicChromatogram chromat;
@@ -76,7 +81,23 @@ int main(int argc, char* argv[]) {
 			break;
 		case 'p':
 			if (bLastWasSpectrum) {
-				for (unsigned int i = 0; i < s.size(); i++) printf("%.6lf\t%.1lf\n", s[i].mz, s[i].intensity);
+				MzMLWriter writer;
+				MSObject object;
+				MSToolkit::Spectrum spectrum;
+				char fileName[] = "test.mzML";
+				writer.createMzML(fileName);
+				writer.setTabs(true);
+				writer.createList();
+
+				for (unsigned int i = 0; i < s.size(); i++)
+				{
+					printf("%.6lf\t%.1lf\n", s[i].mz, s[i].intensity);
+					spectrum.add(s[i].mz, s[i].intensity);
+				}
+			
+				writer.writeSpectra(spectrum);
+				writer.closeList();
+				writer.closeMzML();
 			}
 			else {
 				for (unsigned int i = 0; i < chromat.size(); i++) printf("%.6lf\t%.1lf\n", chromat[i].time, chromat[i].intensity);
