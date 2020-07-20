@@ -724,6 +724,9 @@ bool MzMLWriter::exportScan(Spectrum& s, int tabs){
   sprintf(tmp,"%f",s.getRTime());
   value=tmp;
   exportCvParam("MS:1000016","MS","scan start time","UO:0000031","UO","minute",value,tabs+1);
+  sprintf(tmp, "%.8lf", s.getIonMobility());
+  value = tmp;
+  exportCvParam("MS:1002815", "MS", "inverse reduced ion mobility", "MS:1002814", "MS", "volt-second per square centimeter", value, tabs + 1);
   s.getRawFilter(tmp,128);
   if (strlen(tmp) > 1){
     value=tmp;
@@ -759,6 +762,7 @@ bool MzMLWriter::exportScanWindow(Spectrum& s, int tabs){
   exportCvParam("MS:1000501", "MS", "scan window lower limit", "MS:1000040", "MS", "m/z", value, tabs + 1);
 
   sprintf(tmp, "%.8lf", s.getScanWindowUpper());
+
   value = tmp;
   exportCvParam("MS:1000500", "MS", "scan window upper limit", "MS:1000040", "MS", "m/z", value, tabs + 1);
 
@@ -861,6 +865,9 @@ bool MzMLWriter::exportSpectrum(Spectrum& s, int tabs){
   sprintf(tmp,"%d",s.getMsLevel());
   value=tmp;
   exportCvParam("MS:1000511","MS","ms level","","","",value,tabs+1);
+  sprintf(tmp, "%.12lf", s.getTIC());
+  value = tmp;
+  exportCvParam("MS:1000285", "MS", "total ion current", "", "", "", value, tabs + 1);
   sprintf(tmp,"%.12lf",s[0].mz);
   value=tmp;
   exportCvParam("MS:1000528","MS","lowest observed m/z","MS:1000040","MS","m/z",value,tabs+1);

@@ -27,8 +27,8 @@ class Spectrum {
  public:
   //Constructors & Destructors
   Spectrum();
-  Spectrum(char*);
-  Spectrum(char, unsigned int);
+  //Spectrum(char*);
+  //Spectrum(char, unsigned int);
   Spectrum(const Spectrum&);
   ~Spectrum();
 
@@ -121,7 +121,8 @@ class Spectrum {
   void    				sortMZ();
   void            setPeaks( std::vector<Peak_T> peaks);
   void		    		sortMZRev();
-
+  void	setIonMobility(double mobility);
+  double getIonMobility();
   //for sqlite format
   void setScanID(int scanID);
   int getScanID();
@@ -170,6 +171,7 @@ class Spectrum {
   int              centroidStatus;  //0=profile, 1=centroid, 2=unknown
   double           scanWinLower;    //the instrument spectrum m/z range
   double           scanWinUpper;    //the instrument spectrum m/z range
+  double		   ionMobility;	//the ion mobility;
 
   //private:
   //Functions

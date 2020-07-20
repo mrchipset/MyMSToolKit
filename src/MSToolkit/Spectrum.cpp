@@ -97,6 +97,9 @@ Spectrum::Spectrum(const Spectrum& s){
   selectionWinLower=s.selectionWinLower;
   selectionWinUpper=s.selectionWinUpper;
   centroidStatus = s.centroidStatus;
+  ionMobility = s.ionMobility;
+  scanWinLower = s.scanWinLower;
+  scanWinUpper = s.scanWinUpper;
   vPeaks = new vector<Peak_T>;
   for(i=0;i<s.vPeaks->size();i++){
     vPeaks->push_back(s.vPeaks->at(i));
@@ -627,6 +630,16 @@ void Spectrum::printMe() {
   for(unsigned int i=0; i<vPeaks->size(); i++) {
     cout << setprecision(10) << vPeaks->at(i).mz << "  " << vPeaks->at(i).intensity << endl;
   }
+}
+
+double Spectrum::getIonMobility()
+{
+	return ionMobility;
+}
+
+void Spectrum::setIonMobility(double mobility)
+{
+	ionMobility = mobility;
 }
 
 //Private Functions
