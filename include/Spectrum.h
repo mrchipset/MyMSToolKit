@@ -123,6 +123,7 @@ class Spectrum {
   void		    		sortMZRev();
   void	setIonMobility(double mobility);
   double getIonMobility();
+  bool isMobilityExisted();
   //for sqlite format
   void setScanID(int scanID);
   int getScanID();
@@ -172,7 +173,7 @@ class Spectrum {
   double           scanWinLower;    //the instrument spectrum m/z range
   double           scanWinUpper;    //the instrument spectrum m/z range
   double		   ionMobility;	//the ion mobility;
-
+  bool			  hasMobility;	//wheather is mobility spectrum
   //private:
   //Functions
   static int compareIntensity(const void *p1,const void *p2);

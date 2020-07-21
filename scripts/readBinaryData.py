@@ -30,7 +30,7 @@ print(mz)
 import matplotlib.pyplot as plt
 
 plt.scatter(mz, mobility, c=intensity, cmap='rainbow', alpha=0.7)
-plt.show()zen
+plt.show()
 # %%
 plt.plot(mz)
 plt.show()

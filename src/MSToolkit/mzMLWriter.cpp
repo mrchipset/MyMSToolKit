@@ -724,9 +724,13 @@ bool MzMLWriter::exportScan(Spectrum& s, int tabs){
   sprintf(tmp,"%f",s.getRTime());
   value=tmp;
   exportCvParam("MS:1000016","MS","scan start time","UO:0000031","UO","minute",value,tabs+1);
-  sprintf(tmp, "%.8lf", s.getIonMobility());
-  value = tmp;
-  exportCvParam("MS:1002815", "MS", "inverse reduced ion mobility", "MS:1002814", "MS", "volt-second per square centimeter", value, tabs + 1);
+  if (s.isMobilityExisted())
+  {
+      sprintf(tmp, "%.8lf", s.getIonMobility());
+      value = tmp;
+      exportCvParam("MS:1002815", "MS", "inverse reduced ion mobility", "MS:1002814", "MS", "volt-second per square centimeter", value, tabs + 1);
+  }
+  
   s.getRawFilter(tmp,128);
   if (strlen(tmp) > 1){
     value=tmp;

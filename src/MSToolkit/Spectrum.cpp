@@ -50,7 +50,7 @@ Spectrum::Spectrum(){
   vEZ = new vector<EZState>;
   vZ = new vector<ZState>;
   actMethod=mstNA;
-
+  hasMobility = false;
   strcpy(rawFilter,"");
   strcpy(nativeID,"");
 }
@@ -98,6 +98,7 @@ Spectrum::Spectrum(const Spectrum& s){
   selectionWinUpper=s.selectionWinUpper;
   centroidStatus = s.centroidStatus;
   ionMobility = s.ionMobility;
+  hasMobility = s.hasMobility;
   scanWinLower = s.scanWinLower;
   scanWinUpper = s.scanWinUpper;
   vPeaks = new vector<Peak_T>;
@@ -640,8 +641,13 @@ double Spectrum::getIonMobility()
 void Spectrum::setIonMobility(double mobility)
 {
 	ionMobility = mobility;
+	hasMobility = true;
 }
 
+bool Spectrum::isMobilityExisted()
+{
+	return hasMobility;
+}
 //Private Functions
 
 /* For the qsort */
